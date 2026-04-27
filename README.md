@@ -1,3 +1,4 @@
+# HR-Workforce-Distribution-Analytics
 An interactive HR Analytics dashboard built in Power BI to track key workforce metrics. This project visualizes employee demographics, performance ratings, and organizational structure to help HR departments make data-driven decisions regarding retention and talent management.
 
 # HR Employee Distribution & Workforce Analytics
