@@ -1,46 +1,77 @@
 # HR-Workforce-Distribution-Analytics
 An interactive HR Analytics dashboard built in Power BI to track key workforce metrics. This project visualizes employee demographics, performance ratings, and organizational structure to help HR departments make data-driven decisions regarding retention and talent management.
 
-# HR Employee Distribution & Workforce Analytics
+
+# HR Workforce Analytics & Diversity Insights (2000 - 2020)
 
 ## 📌 Project Overview
-This project provides a data-driven deep dive into organizational health and workforce demographics. Using a dataset of over 22,000 employee records, I developed an interactive Power BI dashboard to visualize key HR metrics including diversity, geographic distribution, and headcount evolution from 2000 to 2020.
+This project is a comprehensive **Human Resources Data Analytics** solution developed to provide a 360-degree view of a company's workforce. Analyzing over **22,000 employee records**, I built an interactive Power BI dashboard that transforms raw HR logs into actionable insights regarding diversity, geographic distribution, and employee retention.
 
-The goal is to help People Operations teams identify representation gaps, track retention through tenure metrics, and understand the shift toward remote work environments.
+The primary objective is to equip People Operations teams with the data needed to identify representation gaps, analyze headcount growth, and monitor the average length of employment across departments.
 
-## 🛠️ Tech Stack
-* **Data Visualization:** Microsoft Power BI
-* **Data Processing:** Power Query (ETL) & DAX
-* **Data Source:** Structured CSV files (Human Resources records)
+---
 
-## 📂 Data Architecture & Files
-This repository contains the raw data used to drive the dashboard:
-* **`Human Resources.csv`**: The master dataset containing core employee profiles.
-* **`employee_change.csv`**: Year-over-year hire and termination trends.
-* **`avg_tenure.csv` / `age_length_emp.csv`**: Calculations for length of service.
-* **Demographic Files**: `gender.csv`, `race.csv`, `agegroup gender.csv`, and `gender_dept.csv` for intersectional diversity analysis.
-* **Geographic Data**: `location.csv` (Headquarters vs. Remote) and state-level distributions.
+## 📊 Detailed Dashboard Analysis
+The analysis is structured into two main report pages, each focusing on critical HR pillars:
 
-## 📊 Dashboard Insights & Features
-The dashboard is split into high-level distribution and detailed demographic breakdowns:
+### 1. Workforce Distribution & Diversity
+* **Headcount Totals:** Total workforce analyzed consists of **11,288 Male**, **10,321 Female**, and **605 Non-Conforming** employees.
+* **Ethnic Representation:** Deep-dive into racial distribution:
+    * **White:** 6,328 employees
+    * **Two or More Races:** 3,648 employees
+    * **Black or African American:** 3,619 employees
+    * **Asian:** 3,562 employees
+    * **Hispanic or Latino:** 2,501 employees
+* **Location Metrics:** **75.25% (16,715)** of employees are based at **Headquarters**, while **24.75% (5,499)** work **Remotely**.
+* **Geographic Spread:** Visualized workforce density across the Midwest, identifying **Ohio** as the primary talent hub.
 
-### 1. Workforce Composition
-* **Total Headcount:** Analyzed distribution across **Male (11.3K)**, **Female (10.3K)**, and **Non-Conforming (0.6K)** employees.
-* **Diversity Tracking:** Visualization of race distributions, highlighting the representation of White, Black/African American, Asian, and Hispanic/Latino groups.
-* **Remote vs. HQ:** A breakdown showing that **75.25%** of the workforce is based at Headquarters, while **24.75%** works Remotely.
+### 2. Retention & Recruitment Trends
+* **Average Tenure:** The company maintains a healthy average employment length of **7.73 years**.
+* **Age Demographics:** Data mapping across age brackets shows a strong presence in the **25-54** range, with specific gender breakdowns for each group (e.g., 3,129 males in the 35-44 bracket).
+* **Historical Growth:** Tracking the **Net Change** from 2000 to 2020, showing a steady climb in headcount with a significant hiring surge identified in the 2010s.
 
-### 2. Retention & Growth
-* **Average Tenure:** The organization maintains an average employment length of **7.73 years**.
-* **Growth Trends:** A time-series analysis from 2000–2020 showing the net change in employee headcount.
-* **Age Distribution:** Detailed mapping of age groups (18–64) categorized by gender to identify recruitment trends across generations.
+---
 
-### 3. Geographic Mapping
-* Interactive map tracking employees across several states (Ohio, Michigan, Illinois, Indiana, etc.), identifying **Ohio** as the primary hub for the workforce.
+## 🛠️ Tech Stack & Methodology
+* **Visualization:** Microsoft Power BI
+* **ETL & Data Modeling:** Power Query (used for cleaning date formats, handling null termination dates, and calculating ages).
+* **DAX Formulas:** Developed custom measures for:
+    * **Total Active Employees** (Filtering out terminated records).
+    * **Net Change %** (Year-over-Year headcount growth).
+    * **Average Tenure** (DATEDIFF logic between hire and termination/current date).
+* **Data Sources:** 10+ CSV files covering gender, race, department, job titles, and location.
 
-## 🚀 How to Use This Project
-1. **Explore the Data:** Review the `.csv` files to understand the underlying data structure.
-2. **View the Report:** Open `Hr employee report (1).pbix` in Power BI Desktop to interact with the filters.
-3. **Reference the PDF:** For a quick look at the static layout, refer to `Hr employee report.pdf`.
+---
+
+## 📂 Data Architecture
+The repository includes the following structured data files:
+* `Human Resources.csv`: Master file with names, hire dates, and job titles.
+* `employee_change.csv`: Yearly hire/termination net change logic.
+* `avg_tenure.csv`: Pre-calculated tenure averages by department.
+* `gender_dept.csv`: Intersectional data for gender representation across units.
+* `age_length_emp.csv`: Core data for age-based retention analysis.
+
+---
+
+## 📈 Visual Documentation
+
+### I. Workforce Composition & Diversity
+*Highlights the high-level distribution of gender, race, and location.*
+![Workforce Distribution](Screenshot%202026-04-28%20031817.png)
+
+### II. Age & Demographic Breakdown
+*Detailed view of age groups and historical headcount evolution.*
+![Age Distribution](Screenshot%202026-04-28%20031833.png)
+
+---
+
+## 🚀 How to Explore This Project
+1. **PBIX File:** Download and open `Hr employee report (1).pbix` to interact with the slicers and drill down into specific departments (e.g., Engineering vs. Sales).
+2. **CSV Datasets:** Review the CSV files to see the raw data structure before Power Query transformations.
+3. **PDF Summary:** See `Hr employee report.pdf` for a static snapshot of the insights.
+
+---
+*Developed as part of a professional Business Intelligence portfolio.*.
 
 ---
 *Developed as part of a professional Data Analytics portfolio.*
