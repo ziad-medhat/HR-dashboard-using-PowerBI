@@ -70,8 +70,4 @@ The repository includes the following structured data files:
 2. **CSV Datasets:** Review the CSV files to see the raw data structure before Power Query transformations.
 3. **PDF Summary:** See `Hr employee report.pdf` for a static snapshot of the insights.
 
----
-*Developed as part of a professional Business Intelligence portfolio.*.
 
----
-*Developed as part of a professional Data Analytics portfolio.*
